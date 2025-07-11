@@ -1,0 +1,108 @@
+<mvc:View controllerName="vro.training.autos.controller.Main"
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns="sap.m">
+
+    <f:DynamicPage>
+
+        <f:title>
+
+            <f:DynamicPageTitle>
+
+                <f:expandedContent>
+                    <core:Fragment fragmentName="vro.training.autos.fragment.Filters"
+                                    type="XML"/>
+                </f:expandedContent>
+
+                <f:navigationActions>
+                    <Button text="{i18n>ir}"
+                            type="Emphasized" />
+                    <Button text="{i18n>adaptarFiltros}"/>
+                </f:navigationActions>
+            
+            </f:DynamicPageTitle>
+        
+        </f:title>
+
+        <f:content>
+
+            <Table id="resultado"
+                    items="{}"
+                    class="sapFDynamicPageAlignContent"
+					width="auto">
+            	<headerToolbar>
+                    <Toolbar>
+                        <Title text="{i18n>resultado}" level="H2"/>
+                    </Toolbar>
+				</headerToolbar>
+
+                <columns>
+                    <Column>
+                        <Text text="{i18n>folio}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>tipoTicket}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>centroEnt}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>centroEnt}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>centroSal}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>material}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>proceso}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>numeroDoc}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>placa}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>entradaBasculaTabla}"/>
+                    </Column>
+
+                    <Column>
+                        <Text text="{i18n>salidaBasculaTabla}"/>
+                    </Column>
+
+                </columns>
+
+                <items>
+
+                    <ColumnListItem>
+                        
+                        <cells>
+
+                            <Text text="{}"/>
+                        
+                        </cells>
+                    
+                    </ColumnListItem>
+                
+                </items>
+            
+            </Table>
+        
+        </f:content>
+    
+    </f:DynamicPage>
+
+</mvc:View>

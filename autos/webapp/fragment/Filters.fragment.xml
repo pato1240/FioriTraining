@@ -1,0 +1,72 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:form="sap.ui.layout.form" 
+	xmlns:core="sap.ui.core">
+
+    <form:SimpleForm editable="true">
+
+        <form:content>
+
+            <HBox wrap="Wrap">
+
+                <VBox class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
+                    <Label text="{i18n>folio}:" />
+                    <Input id="folio"
+                        placeholder="{i18n>buscar}{i18n>folio}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>centroEnt}:" />
+                    <Input id="centroEnt"
+                        placeholder="{i18n>buscar}{i18n>centroEnt}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>ticket}:" />
+                    <Input id="ticket"
+                        placeholder="{i18n>buscar}{i18n>ticket}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>centroSal}:" />
+                    <Input id="centroSal"
+                        placeholder="{i18n>buscar}{i18n>centroSal}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>material}:" />
+                    <Input id="material"
+                        placeholder="{i18n>buscar}{i18n>material}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>numeroDoc}:" />
+                    <Input id="numeroDoc"
+                        placeholder="{i18n>buscar}{i18n>numeroDoc}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>placa}:" />
+                    <Input id="placa"
+                        placeholder="{i18n>buscar}{i18n>placa}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>entradaBascula}:" />
+                    <DatePicker id="entradaBascula"
+                                placeholder="{i18n>ejemploEntrada}"/>
+                </VBox>
+
+                <VBox class="sapUiSmallMarginEnd">
+                    <Label text="{i18n>salidaBascula}:" />
+                    <DatePicker id="salidaBascula"
+                                placeholder="{i18n>ejemploSalida}"/>
+                </VBox>
+
+            </HBox>
+        
+        </form:content>
+
+    </form:SimpleForm>
+
+</core:FragmentDefinition>
