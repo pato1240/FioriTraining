@@ -12,7 +12,8 @@
                 <VBox class="sapUiSmallMarginEnd sapUiSmallMarginBottom">
                     <Label text="{i18n>folio}:" />
                     <Input id="folio"
-                        placeholder="{i18n>buscar}{i18n>folio}"/>
+                            liveChange="onLiveChange"
+                            placeholder="{i18n>buscar}{i18n>folio}"/>
                 </VBox>
 
                 <VBox class="sapUiSmallMarginEnd">

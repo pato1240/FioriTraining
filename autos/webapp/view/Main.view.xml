@@ -16,11 +16,11 @@
                                     type="XML"/>
                 </f:expandedContent>
 
-                <f:navigationActions>
+                <f:actions>
                     <Button text="{i18n>ir}"
                             type="Emphasized" />
                     <Button text="{i18n>adaptarFiltros}"/>
-                </f:navigationActions>
+                </f:actions>
             
             </f:DynamicPageTitle>
         
@@ -28,10 +28,11 @@
 
         <f:content>
 
-            <Table id="resultado"
-                    items="{}"
+            <Table id="tablaResultado"
+                    items="{zservice>/Folio}"
                     class="sapFDynamicPageAlignContent"
 					width="auto">
+
             	<headerToolbar>
                     <Toolbar>
                         <Title text="{i18n>resultado}" level="H2"/>
@@ -45,10 +46,6 @@
 
                     <Column>
                         <Text text="{i18n>tipoTicket}"/>
-                    </Column>
-
-                    <Column>
-                        <Text text="{i18n>centroEnt}"/>
                     </Column>
 
                     <Column>
@@ -87,11 +84,59 @@
 
                 <items>
 
-                    <ColumnListItem>
+                    <ColumnListItem type="Navigation">
                         
                         <cells>
 
-                            <Text text="{}"/>
+                            <Text text="{zservice>Folio}"/>
+
+                            <Text 
+                                core:require = "{
+                                    MyFormatter: 'vro/training/autos/model/formatter'
+                                    }"
+                                text="{
+                                    path: 'zservice>Tipoticket',
+                                    formatter: 'MyFormatter.ticketTypeText.bind($controller)'
+                                }"/>
+
+                            <Text text="{zservice>CentroEnt}"/>
+
+                            <Text text="{zservice>CentroSal}"/>
+
+                            <Text text="{zservice>Material}"/>
+
+                            <Text 
+                                core:require = "{
+                                MyFormatter: 'vro/training/autos/model/formatter'
+                                }"
+                                text="{
+                                    path: 'zservice>Proceso',
+                                    formatter: 'MyFormatter.processText.bind($controller)'
+                                }"/>
+
+                            <Text text="{zservice>NumeroDoc}"/>
+
+                            <Text text="{zservice>Placa}"/>
+
+                            <Text 
+                                core:require = "{
+                                MyFormatter: 'vro/training/autos/model/formatter'
+                                }"
+                                text="{
+                                    path: 'zservice>FechaEntBas',
+                                    formatter: 'MyFormatter.dateFormat.bind($controller)'
+                                }"
+                            />
+                            
+                            <Text 
+                                core:require = "{
+                                MyFormatter: 'vro/training/autos/model/formatter'
+                                }"
+                                text="{
+                                    path: 'zservice>FechaSalBas',
+                                    formatter: 'MyFormatter.dateFormat.bind($controller)'
+                                }"
+                            />
                         
                         </cells>
                     

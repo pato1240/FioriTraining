@@ -1,0 +1,9 @@
+<mvc:View controllerName="vro.training.autos.controller.Details"
+          xmlns:form="sap.ui.layout.form" 
+          xmlns="sap.m"> 
+
+    <form:SimpleForm>
+
+    </form:SimpleForm>
+
+</mvc:View>
