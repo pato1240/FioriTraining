@@ -1,9 +1,131 @@
 <mvc:View controllerName="vro.training.autos.controller.Details"
           xmlns:form="sap.ui.layout.form" 
-          xmlns="sap.m"> 
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns:core="sap.ui.core"
+          xmlns="sap.m">    
+    
+    <Page>
 
-    <form:SimpleForm>
+        <headerContent>
+			<Bar>
+				<contentLeft>
+					<Button text="{i18n>regresar}" press="navToBack" />
+				</contentLeft>
 
-    </form:SimpleForm>
+                <contentMiddle>
+                    <Title text="{i18n>tituloPagina}" />
+                </contentMiddle>
+			</Bar>
+		</headerContent>     
 
+        <content>
+
+            <form:SimpleForm editable="false"
+                             title="{i18n>detalle} {zservice>Folio}"
+                             layout="ColumnLayout">
+
+                <Label text="{i18n>tipoTicket}"/>
+                <Text 
+                    core:require = "{
+                        MyFormatter: 'vro/training/autos/model/formatter'
+                        }"
+                    text="{
+                        path: 'zservice>Tipoticket',
+                        formatter: 'MyFormatter.ticketTypeText.bind($controller)'
+                    }"/>
+
+                <Label text="{i18n>basculaEnt}"/>
+                <Text text="{zservice>BasculaEnt}"/>
+
+                <Label text="{i18n>centroEntrada}"/>
+                <Text text="{zservice>CentroEnt}"/>
+
+                <Label text="{i18n>basculaSal}"/>
+                <Text text="{zservice>BasculaSal}"/>
+
+                <Label text="{i18n>centroSalida}"/>
+                <Text text="{zservice>CentroSal}"/>
+
+                <Label text="{i18n>material}"/>
+                <Text text="{zservice>Material}"/>
+
+                <Label text="{i18n>fechaHoraRegistro}"/>
+                <Text 
+                    core:require = "{
+                        MyFormatter: 'vro/training/autos/model/formatter'
+                    }"
+                    text="{
+                        path: 'zservice>FechaRegBas',
+                        formatter: 'MyFormatter.dateFormat.bind($controller)'
+                    }"/>
+                
+                <Label text="{i18n>placa}"/>
+                <Text text="{zservice>Placa}"/>
+
+                <Label text="{i18n>conductor}"/>
+                <Text text="{zservice>Conductor}"/>
+
+                <Label text="{i18n>fechaHoraPesaje}"/>
+                <Text 
+                    core:require = "{
+                        MyFormatter: 'vro/training/autos/model/formatter'
+                    }"
+                    text="{
+                        path: 'zservice>FechaEntBas',
+                        formatter: 'MyFormatter.dateFormat.bind($controller)'
+                    }"/>
+
+                <Label text="{i18n>pesaje1}"/>
+                <Text text="{zservice>Pesaje}"/>
+
+                <Label text="{i18n>fechaHoraSal}"/>
+                <Text
+                    core:require = "{
+                        MyFormatter: 'vro/training/autos/model/formatter'
+                    }"
+                    text="{
+                        path: 'zservice>FechaSalBas',
+                        formatter: 'MyFormatter.dateFormat.bind($controller)'
+                    }"/>
+
+                <Label text="{i18n>pesaje2}"/>
+                <Text text="{zservice>Pesaje2}"/>
+
+                <Label text="{i18n>pesoNeto}"/>
+                <Text text="{zservice>PesoNeto}"/>
+
+                <Label text="{i18n>pesoTeorico}"/>
+                <Text text="{zservice>PesoTeorico}"/>
+
+                <Label text="{i18n>diferencia}"/>
+                <Text text="{zservice>Diferencia}"/>
+
+                <Label text="{i18n>valor}"/>
+                <Text text="{zservice>Valor}"/>
+
+                <Label text="{i18n>registroIncompleto}"/>
+                <Text text="{zservice>RegIncompleto}"/>
+
+                <Label text="{i18n>numeroDocumento}"/>
+                <Input value="{zservice>NumeroDoc}"
+                       width="9rem"/>
+
+                <Label text="{i18n>mensaje}"/>
+                <Text text="{zservice>Mensaje}"/>
+
+            </form:SimpleForm>
+
+            <HBox justifyContent="End">
+                <Button text="{i18n>generarPdf}" 
+                        press="onCreatePdf"
+                        class="sapUiSmallMarginEnd"/>
+                <Button text="{i18n>actualizarDatos}" 
+                        press="onUpdateData" 
+                        class="sapUiSmallMarginEnd"/>
+            </HBox>
+        
+        </content>
+
+    </Page>      
+    
 </mvc:View>

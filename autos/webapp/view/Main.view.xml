@@ -84,7 +84,8 @@
 
                 <items>
 
-                    <ColumnListItem type="Navigation">
+                    <ColumnListItem type="Navigation"
+                                    press="onNavToDetails">
                         
                         <cells>
 

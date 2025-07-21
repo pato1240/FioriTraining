@@ -100,7 +100,7 @@
         },
         {
           "name": "RouteDetails",
-          "pattern": "folio({folio})",
+          "pattern": "folio({numFolio}):?query:",
           "target": [
             "TargetDetails"
           ]

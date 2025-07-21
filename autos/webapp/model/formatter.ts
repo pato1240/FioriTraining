@@ -1,9 +1,6 @@
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import Controller from "sap/ui/core/mvc/Controller";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
-import DateFormat from "sap/ui/core/format/DateFormat";
-import values from "sap/base/util/values";
-
 
 export default {
     ticketTypeText: function(this:Controller, type:string) {
