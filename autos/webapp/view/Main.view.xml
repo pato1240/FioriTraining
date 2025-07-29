@@ -18,8 +18,10 @@
 
                 <f:actions>
                     <Button text="{i18n>ir}"
-                            type="Emphasized" />
-                    <Button text="{i18n>adaptarFiltros}"/>
+                            type="Emphasized"
+                            press="onFilter" />
+                    <Button text="{i18n>adaptarFiltros}"
+                            press="onAdaptFilters"/>
                 </f:actions>
             
             </f:DynamicPageTitle>
